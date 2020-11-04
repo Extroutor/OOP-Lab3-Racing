@@ -1,8 +1,11 @@
-package Transports;
-
-public class Stupa {
-
-    int speed = 8;
-    double coeff = 0.06;
-
-}
+//package Transports;
+//
+//public class Stupa {
+//
+//    int speed = 8;
+//    double coeff = 0.06;
+//
+//
+//    public String name = "Stupa";
+//
+//}
