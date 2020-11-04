@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RacingForAirTransports {
-    public ArrayList<Transport> transportsArray = new ArrayList<>();
+    public ArrayList<Transport> transportsArray;
 
     RacingForAirTransports(ArrayList<Transport> transports) {
 
@@ -12,7 +12,7 @@ public class RacingForAirTransports {
 
     }
 
-    protected String GetWinner(Integer distance) {
+    protected String GetWinner(Double distance) {
 
         HashMap<String, Double> map = new HashMap<>();
         String winner = null;
@@ -20,7 +20,7 @@ public class RacingForAirTransports {
 
         for (Transport transport : transportsArray) {
 
-            double time = transport.GetRacingTime(distance);
+            double time = transport.GetAirRacingTime(distance);
 
             map.put(transport.name(), time);
 

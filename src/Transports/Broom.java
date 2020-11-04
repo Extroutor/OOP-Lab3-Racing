@@ -10,7 +10,7 @@ public class Broom extends AirTransport{
     }
 
     @Override
-    public double GetRacingTime(double distance) {
+    public double GetAirRacingTime(double distance) {
 
         double dist = distance;
         int count = (int) distance/1000;

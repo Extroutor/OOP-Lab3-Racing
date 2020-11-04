@@ -4,8 +4,8 @@ import Transports.*;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Race groundRace = new Race(RaceType.GroundTransport, 1000);
-        Race airRace = new Race(RaceType.AirTransport, 1000);
+        Race groundRace = new Race(RaceType.GroundTransport, 1000.0);
+        Race airRace = new Race(RaceType.AirTransport, 1000.0);
 
         BactrianCamel bactrianCamel = new BactrianCamel();
         BootsEverywhereWalkers bootsEverywhereWalkers = new BootsEverywhereWalkers();

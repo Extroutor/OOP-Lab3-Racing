@@ -13,7 +13,7 @@ public class BootsEverywhereWalkers extends GroundTransport {
     }
 
     @Override
-    public double GetRacingTime(double distance) {
+    public double GetGroundRacingTime(double distance) {
 
         int restCount = (int) distance / speed;
         double totalTime = 0;
@@ -31,7 +31,5 @@ public class BootsEverywhereWalkers extends GroundTransport {
 
         return totalTime;
     }
-
-
 
 }

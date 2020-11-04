@@ -6,6 +6,8 @@ public abstract class Transport {
 
     public abstract boolean CanTakePart(RaceType type);
 
-    public double GetRacingTime(double distance) { return 0; }
+    public double GetGroundRacingTime(double distance) { return 0; }
+    public double GetAirRacingTime(double distance) { return 0; }
+
 
 }

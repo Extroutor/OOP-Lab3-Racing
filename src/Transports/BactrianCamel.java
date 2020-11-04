@@ -14,7 +14,7 @@ public class BactrianCamel extends GroundTransport {
 
 
     @Override
-    public double GetRacingTime(double distance) {
+    public double GetGroundRacingTime(double distance) {
 
         int restCount = (int) distance / speed;
         double totalTime = 0;
@@ -32,6 +32,5 @@ public class BactrianCamel extends GroundTransport {
 
         return totalTime;
     }
-
 
 }

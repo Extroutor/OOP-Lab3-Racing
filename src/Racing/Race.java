@@ -8,9 +8,9 @@ public class Race {
 
     public final ArrayList<Transport> transportsList = new ArrayList<>();
     RaceType type;
-    Integer distance = 0;
+    Double distance;
 
-    public Race(RaceType type, Integer distance) {
+    public Race(RaceType type, Double distance) {
 
         this.type = type;
         this.distance = distance;
@@ -34,9 +34,9 @@ public class Race {
         } else if (this.type == RaceType.AirTransport) {
             RacingForAirTransports racing = new RacingForAirTransports(transportsList);
             return racing.GetWinner(distance);
-//        } else if (this.type == RaceType.AnyTransport) {
-//            RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
-//            return racing.GetWinner(distance);
+        } else if (this.type == RaceType.AnyTransport) {
+            RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
+            return racing.GetWinner(distance);
         } else
             throw new Exception("Error");
 

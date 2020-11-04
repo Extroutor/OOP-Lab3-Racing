@@ -10,9 +10,9 @@ public class MagicCarpet extends AirTransport{
     }
 
     @Override
-    public double GetRacingTime(double distance) {
+    public double GetAirRacingTime(double distance) {
 
-        double totalTime = 0;
+        double totalTime;
 
         if (distance < 1000)
             totalTime = distance / speed;
@@ -23,6 +23,7 @@ public class MagicCarpet extends AirTransport{
         else totalTime = distance*0.05/speed;
 
         return totalTime;
+
     }
 
 

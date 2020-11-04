@@ -6,7 +6,7 @@ public class AirTransport extends Transport {
 
     @Override
     public boolean CanTakePart(RaceType type) {
-        return this.type == type;
+        return this.type != RaceType.GroundTransport;
     }
 
 }

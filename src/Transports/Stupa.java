@@ -10,12 +10,10 @@ public class Stupa extends AirTransport{
     }
 
     @Override
-    public double GetRacingTime(double distance) {
+    public double GetAirRacingTime(double distance) {
 
         return distance*0.06/speed;
 
     }
-
-
 
 }
