@@ -1,6 +1,8 @@
-package Transports;
+package Transports.AirTransports;
 
-public class Broom extends AirTransport{
+import Transports.AirTransport;
+
+public class Broom extends AirTransport {
 
     double speed = 10.0;
 

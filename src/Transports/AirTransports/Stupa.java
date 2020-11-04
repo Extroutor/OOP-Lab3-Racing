@@ -1,6 +1,8 @@
-package Transports;
+package Transports.AirTransports;
 
-public class Stupa extends AirTransport{
+import Transports.AirTransport;
+
+public class Stupa extends AirTransport {
 
     double speed = 10.0;
 

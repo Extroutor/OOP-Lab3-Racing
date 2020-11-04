@@ -1,17 +1,18 @@
-package Transports;
+package Transports.GroundTransports;
 
-public class BactrianCamel extends GroundTransport {
+import Transports.GroundTransport;
 
-    int speed = 10;
-    int timeBeforeRest = 30;
-    int firstRestTime = 5;
-    int otherRestTime = 8;
+public class BootsEverywhereWalkers extends GroundTransport {
+
+    int speed = 6;
+    int timeBeforeRest = 60;
+    int firstRestTime = 10;
+    int otherRestTime = 5;
 
     @Override
     public String name() {
-        return "BactrianCamel";
+        return "BootsEverywhereWalkers";
     }
-
 
     @Override
     public double GetGroundRacingTime(double distance) {

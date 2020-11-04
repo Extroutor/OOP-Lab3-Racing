@@ -1,6 +1,8 @@
-package Transports;
+package Transports.GroundTransports;
 
-public class CamelSpeedWalker extends GroundTransport{
+import Transports.GroundTransport;
+
+public class CamelSpeedWalker extends GroundTransport {
 
         int speed = 40;
         int timeBeforeRest = 10;

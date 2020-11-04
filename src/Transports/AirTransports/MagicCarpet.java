@@ -1,6 +1,8 @@
-package Transports;
+package Transports.AirTransports;
 
-public class MagicCarpet extends AirTransport{
+import Transports.AirTransport;
+
+public class MagicCarpet extends AirTransport {
 
     double speed = 10.0;
 

@@ -1,6 +1,8 @@
-package Transports;
+package Transports.GroundTransports;
 
-public class Centaur extends GroundTransport{
+import Transports.GroundTransport;
+
+public class Centaur extends GroundTransport {
 
     int speed = 15;
     int timeBeforeRest = 8;

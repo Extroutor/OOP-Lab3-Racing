@@ -1,5 +1,12 @@
 import Racing.Race;
 import Transports.*;
+import Transports.AirTransports.Broom;
+import Transports.AirTransports.MagicCarpet;
+import Transports.AirTransports.Stupa;
+import Transports.GroundTransports.BactrianCamel;
+import Transports.GroundTransports.BootsEverywhereWalkers;
+import Transports.GroundTransports.CamelSpeedWalker;
+import Transports.GroundTransports.Centaur;
 
 public class Main {
     public static void main(String[] args) throws Exception {
