@@ -31,23 +31,15 @@ public class Race {
         if (this.type == RaceType.GroundTransport) {
             RacingForGroundTransports racing = new RacingForGroundTransports(transportsList);
             return racing.GetWinner(distance);
-//        }
-//        else if (this.type == RaceType.AirTransport) {
-//            RacingForAirTransports racing = new RacingForAirTransports(transportsList);
-//            return racing.GetTime();
-//        }
-//        else if (this.type == RaceType.AnyTransport) {
+        } else if (this.type == RaceType.AirTransport) {
+            RacingForAirTransports racing = new RacingForAirTransports(transportsList);
+            return racing.GetWinner(distance);
+//        } else if (this.type == RaceType.AnyTransport) {
 //            RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
-//            return racing.GetTime();
-//        }
-//        else
-//            throw new Exception("Error");
-//    }
+//            return racing.GetWinner(distance);
+        } else
+            throw new Exception("Error");
 
-        }
-        return "Error";
     }
 }
-
-
 

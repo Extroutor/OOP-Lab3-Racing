@@ -12,18 +12,19 @@ public class Centaur extends GroundTransport{
     }
 
     @Override
-    public int GetRacingTime(Integer distance) {
+    public double GetRacingTime(double distance) {
 
-        int restCount = distance / speed;
-        int totalTime = 0;
+        int restCount = (int) distance / speed;
+        double totalTime = 0;
 
         for (int i = 0; i < restCount; i++) {
-
             totalTime += timeBeforeRest + restTime;
         }
 
         totalTime += distance - restCount*timeBeforeRest;
 
         return totalTime;
+
     }
+
 }

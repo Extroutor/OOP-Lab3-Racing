@@ -1,11 +1,21 @@
-//package Transports;
-//
-//public class Stupa {
-//
-//    int speed = 8;
-//    double coeff = 0.06;
-//
-//
-//    public String name = "Stupa";
-//
-//}
+package Transports;
+
+public class Stupa extends AirTransport{
+
+    double speed = 10.0;
+
+    @Override
+    public String name() {
+        return "Stupa";
+    }
+
+    @Override
+    public double GetRacingTime(double distance) {
+
+        return distance*0.06/speed;
+
+    }
+
+
+
+}

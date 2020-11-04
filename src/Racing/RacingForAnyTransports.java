@@ -1,20 +1,40 @@
-package Racing;
-
-import Transports.Transport;
-
-import java.util.ArrayList;
-
-public class RacingForAnyTransports {
-    public ArrayList<Transport> transports = new ArrayList<>();
-
-    RacingForAnyTransports(ArrayList<Transport> transports) {
-
-        this.transports = transports;
-
-    }
-
-    protected void GetTime() {
-
-
-    }
-}
+//package Racing;
+//
+//import Transports.Transport;
+//
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//
+//public class RacingForAnyTransports {
+//    public ArrayList<Transport> transportsArray = new ArrayList<>();
+//
+//    RacingForAnyTransports(ArrayList<Transport> transports) {
+//
+//        this.transportsArray = transports;
+//
+//    }
+//    protected String GetWinner(Integer distance) {
+//
+//        HashMap<String, Double> map = new HashMap<>();
+//        String winner = null;
+//        Double minTime = 0.0;
+//
+//        for (Transport transport : transportsArray) {
+//
+//            double time = transport.GetRacingTime(distance);
+//
+//            map.put(transport.name(), time);
+//
+//        }
+//
+//        for (String trans : map.keySet()) {
+//
+//            if (map.get(trans) < minTime)
+//                minTime = map.get(trans);
+//            winner = trans;
+//        }
+//
+//        return winner;
+//
+//    }
+//}

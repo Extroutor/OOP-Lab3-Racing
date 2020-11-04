@@ -10,5 +10,4 @@ public class GroundTransport extends Transport {
     }
 
 
-
 }

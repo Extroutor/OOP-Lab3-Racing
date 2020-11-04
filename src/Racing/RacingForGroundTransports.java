@@ -15,13 +15,13 @@ public class RacingForGroundTransports {
 
     protected String GetWinner(Integer distance) {
 
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, Double> map = new HashMap<>();
         String winner = null;
-        int minTime = 0;
+        Double minTime = 0.0;
 
         for (Transport transport : transportsArray) {
 
-            int time = transport.GetRacingTime(distance);
+            double time = transport.GetRacingTime(distance);
 
             map.put(transport.name(), time);
 

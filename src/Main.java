@@ -1,21 +1,31 @@
 import Racing.Race;
-import Transports.BactrianCamel;
-import Transports.BootsEverywhereWalkers;
-import Transports.RaceType;
+import Transports.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Race race1 = new Race(RaceType.GroundTransport, 1000);
+        Race groundRace = new Race(RaceType.GroundTransport, 1000);
+        Race airRace = new Race(RaceType.AirTransport, 1000);
 
         BactrianCamel bactrianCamel = new BactrianCamel();
         BootsEverywhereWalkers bootsEverywhereWalkers = new BootsEverywhereWalkers();
+        CamelSpeedWalker camelSpeedWalker = new CamelSpeedWalker();
+        Centaur centaur = new Centaur();
 
+        Broom broom = new Broom();
+        MagicCarpet magicCarpet = new MagicCarpet();
+        Stupa stupa = new Stupa();
 
-        race1.AddTransport(bactrianCamel);
-        race1.AddTransport(bootsEverywhereWalkers);
+        groundRace.AddTransport(bactrianCamel);
+        groundRace.AddTransport(bootsEverywhereWalkers);
+        groundRace.AddTransport(camelSpeedWalker);
+        groundRace.AddTransport(centaur);
+        System.out.println("Winner: " + groundRace.Run());
 
-        System.out.println("Winner: " + race1.Run());
+        airRace.AddTransport(broom);
+        airRace.AddTransport(magicCarpet);
+        airRace.AddTransport(stupa);
+        System.out.println("Winner: " + airRace.Run());
 
 
     }
