@@ -26,17 +26,17 @@ public class Race {
 
     }
 
-    public String Run() throws Exception {
+    public void Run() throws Exception {
 
         if (this.type == RaceType.GroundTransport) {
             RacingForGroundTransports racing = new RacingForGroundTransports(transportsList);
-            return racing.GetWinner(distance);
+            racing.GetWinner(distance);
         } else if (this.type == RaceType.AirTransport) {
             RacingForAirTransports racing = new RacingForAirTransports(transportsList);
-            return racing.GetWinner(distance);
+            racing.GetWinner(distance);
         } else if (this.type == RaceType.AnyTransport) {
             RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
-            return racing.GetWinner(distance);
+            racing.GetWinner(distance);
         } else
             throw new Exception("Your type of race doesn't exist");
 

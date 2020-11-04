@@ -13,11 +13,11 @@ public class RacingForGroundTransports {
 
     }
 
-    protected String GetWinner(Double distance) {
+    protected void GetWinner(Double distance) {
 
         HashMap<String, Double> map = new HashMap<>();
         String winner = null;
-        Double minTime = 0.0;
+        Double minTime = -1.0;
 
         for (Transport transport : transportsArray) {
 
@@ -26,15 +26,19 @@ public class RacingForGroundTransports {
             map.put(transport.name(), time);
 
         }
-
+        System.out.println("List of Transports in the race:");
         for (String trans : map.keySet()) {
-
-            if (map.get(trans) < minTime)
+            System.out.println(trans + " - " + map.get(trans));
+            if (minTime == -1.0) {
                 minTime = map.get(trans);
                 winner = trans;
+            } else if (map.get(trans) < minTime) {
+                minTime = map.get(trans);
+                winner = trans;
+            }
         }
-
-        return winner;
+        System.out.println("~Winner is " + winner + " - " + minTime);
+        System.out.println("");
 
     }
 

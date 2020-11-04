@@ -10,7 +10,7 @@ import Transports.GroundTransports.Centaur;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
+        System.out.println("");
         Race groundRace = new Race(RaceType.GroundTransport, 1000.0);
         Race airRace = new Race(RaceType.AirTransport, 1000.0);
         Race anyRace = new Race(RaceType.AnyTransport, 1000.0);
@@ -28,16 +28,16 @@ public class Main {
         groundRace.AddTransport(bootsEverywhereWalkers);
         groundRace.AddTransport(camelSpeedWalker);
         groundRace.AddTransport(centaur);
-        System.out.println("Winner: " + groundRace.Run());
+        groundRace.Run();
 
         airRace.AddTransport(broom);
         airRace.AddTransport(magicCarpet);
         airRace.AddTransport(stupa);
-        System.out.println("Winner: " + airRace.Run());
-
+        airRace.Run();
+        System.out.println("");
         anyRace.AddTransport(broom);
         anyRace.AddTransport(bactrianCamel);
-        System.out.println("Winner: " + anyRace.Run());
+        anyRace.Run();
 
     }
 }

@@ -19,10 +19,10 @@ public class MagicCarpet extends AirTransport {
         if (distance < 1000)
             totalTime = distance / speed;
         else if (distance < 5000)
-            totalTime = distance*0.03/speed;
+            totalTime = distance*0.97/speed;
         else if (distance < 10000)
-            totalTime = distance*0.1/speed;
-        else totalTime = distance*0.05/speed;
+            totalTime = distance*0.9/speed;
+        else totalTime = distance*0.95/speed;
 
         return totalTime;
 
