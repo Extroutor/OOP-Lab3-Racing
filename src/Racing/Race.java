@@ -38,7 +38,7 @@ public class Race {
             RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
             return racing.GetWinner(distance);
         } else
-            throw new Exception("Error");
+            throw new Exception("Your type of race doesn't exist");
 
     }
 }
