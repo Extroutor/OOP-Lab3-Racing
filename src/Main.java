@@ -6,6 +6,7 @@ public class Main {
 
         Race groundRace = new Race(RaceType.GroundTransport, 1000.0);
         Race airRace = new Race(RaceType.AirTransport, 1000.0);
+        Race anyRace = new Race(RaceType.AnyTransport, 1000.0);
 
         BactrianCamel bactrianCamel = new BactrianCamel();
         BootsEverywhereWalkers bootsEverywhereWalkers = new BootsEverywhereWalkers();
@@ -27,6 +28,9 @@ public class Main {
         airRace.AddTransport(stupa);
         System.out.println("Winner: " + airRace.Run());
 
+        anyRace.AddTransport(broom);
+        anyRace.AddTransport(bactrianCamel);
+        System.out.println("Winner: " + anyRace.Run());
 
     }
 }
