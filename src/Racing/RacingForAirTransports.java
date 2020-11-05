@@ -22,7 +22,7 @@ public class RacingForAirTransports {
 
             double time = transport.GetAirRacingTime(distance);
 
-            map.put(transport.name(), time);
+            map.put(transport.GetName(), time);
 
         }
         System.out.println("List of Transports in the race:");

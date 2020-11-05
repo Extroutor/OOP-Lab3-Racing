@@ -2,14 +2,14 @@ package Transports;
 
 public abstract class Transport {
 
-    public String name() { return "No name"; }
-    public Double speed() { return 0.0; }
+    protected String name;
+    protected Double speed;
 
+    public String GetName() { return ""; };
 
     public abstract boolean CanTakePart(RaceType type);
 
     public double GetGroundRacingTime(double distance) { return 0; }
     public double GetAirRacingTime(double distance) { return 0; }
-
 
 }

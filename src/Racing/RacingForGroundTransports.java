@@ -23,7 +23,7 @@ public class RacingForGroundTransports {
 
             double time = transport.GetGroundRacingTime(distance);
 
-            map.put(transport.name(), time);
+            map.put(transport.GetName(), time);
 
         }
         System.out.println("List of Transports in the race:");

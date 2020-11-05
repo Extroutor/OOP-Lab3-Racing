@@ -1,12 +1,7 @@
 import Racing.Race;
 import Transports.*;
-import Transports.AirTransports.Broom;
-import Transports.AirTransports.MagicCarpet;
-import Transports.AirTransports.Stupa;
-import Transports.GroundTransports.BactrianCamel;
-import Transports.GroundTransports.BootsEverywhereWalkers;
-import Transports.GroundTransports.CamelSpeedWalker;
-import Transports.GroundTransports.Centaur;
+import Transports.AirTransports.*;
+import Transports.GroundTransports.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -34,7 +29,7 @@ public class Main {
         airRace.AddTransport(magicCarpet);
         airRace.AddTransport(stupa);
         airRace.Run();
-        System.out.println("");
+
         anyRace.AddTransport(broom);
         anyRace.AddTransport(bactrianCamel);
         anyRace.Run();

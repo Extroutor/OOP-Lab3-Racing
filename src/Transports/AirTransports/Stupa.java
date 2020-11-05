@@ -4,17 +4,16 @@ import Transports.AirTransport;
 
 public class Stupa extends AirTransport {
 
-    @Override
-    public String name() {
-        return "Stupa";
+    public Stupa() {
+        name = "Stupa";
+        speed = 8.0;
     }
-    @Override
-    public Double speed() { return 10.0; }
 
-    @Override
+    public String GetName() { return name;}
+
     public double GetAirRacingTime(double distance) {
 
-        return distance*0.94/speed();
+        return distance*0.94/speed;
 
     }
 
