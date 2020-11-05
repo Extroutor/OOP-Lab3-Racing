@@ -4,12 +4,12 @@ import Transports.AirTransport;
 
 public class Broom extends AirTransport {
 
-    double speed = 10.0;
 
     @Override
-    public String name() {
-        return "Broom";
-    }
+    public String name() { return "Broom"; }
+    @Override
+    public Double speed() { return 10.0; }
+
 
     @Override
     public double GetAirRacingTime(double distance) {
@@ -23,7 +23,7 @@ public class Broom extends AirTransport {
 
         }
 
-        return dist/speed;
+        return dist/speed();
 
     }
 

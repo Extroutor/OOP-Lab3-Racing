@@ -4,33 +4,34 @@ import Transports.GroundTransport;
 
 public class BactrianCamel extends GroundTransport {
 
-    int speed = 10;
-    int timeBeforeRest = 30;
-    int firstRestTime = 5;
-    int otherRestTime = 8;
-
     @Override
-    public String name() {
-        return "BactrianCamel";
-    }
+    public String name() { return "BactrianCamel"; }
+    @Override
+    public Double speed() { return 10.0; }
+    @Override
+    public Double timeBeforeRest() { return 30.0; }
+    @Override
+    public Double firstRestTime() { return 5.0; }
+    @Override
+    public Double otherRestTime() { return 8.0; }
 
 
     @Override
     public double GetGroundRacingTime(double distance) {
 
-        int restCount = (int) distance / speed;
+        int restCount = (int) ((int) (distance / speed()) / timeBeforeRest());
         double totalTime = 0;
 
         for (int i = 0; i < restCount; i++) {
 
             if (i == 0)
-                totalTime += timeBeforeRest + firstRestTime;
+                totalTime += timeBeforeRest() + firstRestTime();
             else
-                totalTime += timeBeforeRest + otherRestTime;
+                totalTime += timeBeforeRest() + otherRestTime();
 
         }
 
-        totalTime += distance - restCount*timeBeforeRest;
+        totalTime += distance/speed() - restCount*timeBeforeRest();
 
         return totalTime;
     }

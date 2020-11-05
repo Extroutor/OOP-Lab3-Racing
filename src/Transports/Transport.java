@@ -3,6 +3,8 @@ package Transports;
 public abstract class Transport {
 
     public String name() { return "No name"; }
+    public Double speed() { return 0.0; }
+
 
     public abstract boolean CanTakePart(RaceType type);
 

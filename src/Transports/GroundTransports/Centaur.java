@@ -4,26 +4,31 @@ import Transports.GroundTransport;
 
 public class Centaur extends GroundTransport {
 
-    int speed = 15;
-    int timeBeforeRest = 8;
-    int restTime = 2;
+    Double timeBeforeRest = 8.0;
+    Double restTime = 2.0;
 
     @Override
     public String name() {
         return "BootsEverywhereWalkers";
     }
+    @Override
+    public Double speed() { return 15.0; }
+    @Override
+    public Double timeBeforeRest() { return 8.0; }
+    @Override
+    public Double otherRestTime() { return 2.0; }
 
     @Override
     public double GetGroundRacingTime(double distance) {
 
-        int restCount = (int) distance / speed;
+        int restCount = (int) ((int) (distance / speed()) / timeBeforeRest);
         double totalTime = 0;
 
         for (int i = 0; i < restCount; i++) {
             totalTime += timeBeforeRest + restTime;
         }
 
-        totalTime += distance - restCount*timeBeforeRest;
+        totalTime += distance/speed() - restCount*timeBeforeRest;
 
         return totalTime;
 
