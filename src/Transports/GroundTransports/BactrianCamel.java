@@ -1,7 +1,6 @@
 package Transports.GroundTransports;
 
 import Transports.GroundTransport;
-import Transports.RaceType;
 
 public class BactrianCamel extends GroundTransport {
 

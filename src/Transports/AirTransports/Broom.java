@@ -1,7 +1,6 @@
 package Transports.AirTransports;
 
 import Transports.AirTransport;
-import Transports.RaceType;
 
 public class Broom extends AirTransport {
 
