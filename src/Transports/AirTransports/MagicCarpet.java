@@ -7,7 +7,7 @@ public class MagicCarpet extends AirTransport {
 
     public MagicCarpet() {
 
-        super("MagicCarpet", 10.0, RaceType.AirTransport);
+        super("MagicCarpet", 10.0);
 
     }
 

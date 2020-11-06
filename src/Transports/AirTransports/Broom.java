@@ -7,7 +7,7 @@ public class Broom extends AirTransport {
 
     public Broom() {
 
-        super("Broom", 20.0, RaceType.AirTransport);
+        super("Broom", 20.0);
 
     }
 

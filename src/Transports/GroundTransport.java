@@ -9,8 +9,8 @@ public class GroundTransport extends Transport {
     protected Double timeBeforeRest;
     protected Double usualTimeRest;
 
-    protected GroundTransport(String name, Double speed, RaceType type) {
-        super(name, speed, type);
+    protected GroundTransport(String name, Double speed) {
+        super(name, speed, RaceType.GroundTransport);
     }
 
 

@@ -7,7 +7,7 @@ public class Stupa extends AirTransport {
 
     public Stupa() {
 
-        super("Stupa", 8.0, RaceType.AirTransport);
+        super("Stupa", 8.0);
 
     }
 

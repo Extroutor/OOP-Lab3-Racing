@@ -8,7 +8,7 @@ public class CamelSpeedWalker extends GroundTransport {
 
     public CamelSpeedWalker() {
 
-        super("CamelSpeedWalker", 40.0, RaceType.GroundTransport);
+        super("CamelSpeedWalker", 40.0);
         timeBeforeRest = 10.0;
         individualRest.add(5.0);
         individualRest.add(6.5);
