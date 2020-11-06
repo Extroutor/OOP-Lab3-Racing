@@ -16,6 +16,7 @@ public class CamelSpeedWalker extends GroundTransport {
 
     }
 
+    @Override
     public String GetName() {
 
         return name;

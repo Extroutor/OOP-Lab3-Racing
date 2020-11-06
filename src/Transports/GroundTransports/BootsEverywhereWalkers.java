@@ -14,6 +14,7 @@ public class BootsEverywhereWalkers extends GroundTransport {
 
     }
 
+    @Override
     public String GetName() {
 
         return name;

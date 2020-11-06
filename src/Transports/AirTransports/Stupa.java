@@ -9,8 +9,10 @@ public class Stupa extends AirTransport {
         speed = 8.0;
     }
 
+    @Override
     public String GetName() { return name;}
 
+    @Override
     public double GetAirRacingTime(double distance) {
 
         return distance*0.94/speed;

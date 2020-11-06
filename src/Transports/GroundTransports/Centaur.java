@@ -13,6 +13,7 @@ public class Centaur extends GroundTransport {
 
     }
 
+    @Override
     public String GetName() {
 
         return name;

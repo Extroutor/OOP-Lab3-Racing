@@ -13,6 +13,7 @@ public class BactrianCamel extends GroundTransport {
         usualTimeRest = 8.0;
     }
 
+    @Override
     public String GetName() {
 
         return name;

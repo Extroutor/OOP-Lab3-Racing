@@ -6,5 +6,5 @@ public class AirTransport extends Transport {
     public boolean CanTakePart(RaceType type) {
         return type != RaceType.GroundTransport;
     }
-
+    
 }

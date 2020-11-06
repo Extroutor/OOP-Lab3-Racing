@@ -13,6 +13,7 @@ public class GroundTransport extends Transport {
         return type != RaceType.AirTransport;
     }
 
+    @Override
     public double GetGroundRacingTime(double distance) {
 
         HashMap<Integer, Double> uniRests = new HashMap<>(individualRest);
