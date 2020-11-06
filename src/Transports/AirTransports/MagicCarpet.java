@@ -1,34 +1,31 @@
 package Transports.AirTransports;
 
 import Transports.AirTransport;
+import Transports.RaceType;
 
 public class MagicCarpet extends AirTransport {
 
     public MagicCarpet() {
-        name = "MagicCarpet";
-        speed = 10.0;
+
+        super("MagicCarpet", 10.0, RaceType.AirTransport);
+
     }
 
     @Override
-    public String GetName() { return name;}
+    public double DistanceReducer(double distance) {
 
-    @Override
-    public double GetAirRacingTime(double distance) {
-
-        double totalTime;
+        double newDist;
 
         if (distance < 1000)
-            totalTime = distance / speed;
+            newDist = distance;
         else if (distance < 5000)
-            totalTime = distance*0.97/speed;
+            newDist = distance*0.97;
         else if (distance < 10000)
-            totalTime = distance*0.9/speed;
-        else totalTime = distance*0.95/speed;
+            newDist = distance*0.9;
+        else newDist = distance*0.95;
 
-        return totalTime;
+        return newDist;
 
     }
-
-
 
 }

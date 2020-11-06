@@ -1,32 +1,28 @@
 package Transports.AirTransports;
 
 import Transports.AirTransport;
+import Transports.RaceType;
 
 public class Broom extends AirTransport {
 
-
     public Broom() {
-        name = "Broom";
-        speed = 20.0;
+
+        super("Broom", 20.0, RaceType.AirTransport);
+
     }
 
     @Override
-    public String GetName() { return name;}
+    public double DistanceReducer(double distance) {
 
-    @Override
-    public double GetAirRacingTime(double distance) {
-
-        double dist = distance;
         int count = (int) distance/1000;
 
         for (int i = 0; i < count; i++) {
 
-            dist = dist*0.99;
+            distance = distance*0.99;
 
         }
 
-        return dist/speed;
-
+        return distance;
     }
 
 }

@@ -1,23 +1,24 @@
 package Transports;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GroundTransport extends Transport {
 
-    protected HashMap<Integer, Double> individualRest = new HashMap<>();
+    protected ArrayList<Double> individualRest = new ArrayList<>();
     protected Double timeBeforeRest;
     protected Double usualTimeRest;
 
-    @Override
-    public boolean CanTakePart(RaceType type) {
-        return type != RaceType.AirTransport;
+    protected GroundTransport(String name, Double speed, RaceType type) {
+        super(name, speed, type);
     }
 
-    @Override
-    public double GetGroundRacingTime(double distance) {
 
-        HashMap<Integer, Double> uniRests = new HashMap<>(individualRest);
-        int restCount = (int) ((distance / speed) / timeBeforeRest);
+    @Override
+    public double GetRacingTime(double distance) {
+
+        ArrayList<Double> uniRests = new ArrayList<>(individualRest);
+        int restCount = (int) ((distance / GetSpeed()) / timeBeforeRest);
         int count = restCount;
         double totalTime = 0;
 
@@ -28,9 +29,9 @@ public class GroundTransport extends Transport {
                 count--;
             }
             else {
-                for (Integer temp : uniRests.keySet()) {
+                for (Double temp : uniRests) {
 
-                    totalTime += timeBeforeRest + uniRests.get(temp);
+                    totalTime += timeBeforeRest + temp;
                     count--;
 
                 }
@@ -39,7 +40,7 @@ public class GroundTransport extends Transport {
 
         }
 
-        totalTime += distance / speed - restCount * timeBeforeRest;
+        totalTime += distance / GetSpeed() - restCount * timeBeforeRest;
 
         return totalTime;
 

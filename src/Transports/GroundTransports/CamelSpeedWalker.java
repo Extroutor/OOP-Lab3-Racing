@@ -1,27 +1,19 @@
 package Transports.GroundTransports;
 
 import Transports.GroundTransport;
+import Transports.RaceType;
 
 public class CamelSpeedWalker extends GroundTransport {
 
 
     public CamelSpeedWalker() {
 
-        name = "CamelSpeedWalker";
-        speed = 40.0;
+        super("CamelSpeedWalker", 40.0, RaceType.GroundTransport);
         timeBeforeRest = 10.0;
-        individualRest.put(1, 5.0);
-        individualRest.put(2, 6.5);
+        individualRest.add(5.0);
+        individualRest.add(6.5);
         usualTimeRest = 8.0;
 
     }
-
-    @Override
-    public String GetName() {
-
-        return name;
-
-    }
-
 
 }

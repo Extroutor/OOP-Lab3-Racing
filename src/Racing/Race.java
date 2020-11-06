@@ -4,6 +4,7 @@ import Transports.RaceType;
 import Transports.Transport;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Race {
 
@@ -20,27 +21,38 @@ public class Race {
 
     public void AddTransport(Transport transport) throws Exception {
 
-        if (transport.CanTakePart(type))
+        if (type == RaceType.AnyTransport || type == transport.GetType())
             transportsList.add(transport);
         else
             throw new Exception("Wrong type of transport");
 
     }
 
-    public void Run() throws Exception {
+    public void Run() {
 
-        if (this.type == RaceType.GroundTransport) {
-            RacingForGroundTransports racing = new RacingForGroundTransports(transportsList);
-            racing.GetWinner(distance);
-        } else if (this.type == RaceType.AirTransport) {
-            RacingForAirTransports racing = new RacingForAirTransports(transportsList);
-            racing.GetWinner(distance);
-        } else if (this.type == RaceType.AnyTransport) {
-            RacingForAnyTransports racing = new RacingForAnyTransports(transportsList);
-            racing.GetWinner(distance);
-        } else
-            throw new Exception("Your type of race doesn't exist");
+        HashMap<String, Double> map = new HashMap<>();
+        String winner = null;
+        Double minTime = -1.0;
+        System.out.println("List of Transports in the race:");
+        for (Transport transport : transportsList) {
 
+            double time = transport.GetRacingTime(distance);
+            map.put(transport.GetName(), time);
+
+        }
+            for (String trans : map.keySet()) {
+                System.out.println(trans + " - " + map.get(trans));
+                if (minTime == -1.0) {
+                    minTime = map.get(trans);
+                    winner = trans;
+                } else if (map.get(trans) < minTime) {
+                    minTime = map.get(trans);
+                    winner = trans;
+                }
+            }
+
+        System.out.println("~Winner is " + winner + " - " + minTime);
+        System.out.println("");
     }
 }
 

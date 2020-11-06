@@ -1,15 +1,23 @@
 package Transports;
 
-public class Transport {
+public abstract class Transport {
 
-    protected String name;
-    protected Double speed;
+    private final String name;
+    private final Double speed;
+    private final RaceType type;
 
-    public String GetName() { return ""; }
+    protected Transport(String name, Double speed, RaceType type){
 
-    public boolean CanTakePart(RaceType type) { return false; }
+        this.name = name;
+        this.speed = speed;
+        this.type = type;
 
-    public double GetGroundRacingTime(double distance) { return 0; }
-    public double GetAirRacingTime(double distance) { return 0; }
+    }
+
+    public String GetName() { return name; }
+    public RaceType GetType() { return type; }
+    protected Double GetSpeed() { return speed; }
+
+    public abstract double GetRacingTime(double distance);
 
 }

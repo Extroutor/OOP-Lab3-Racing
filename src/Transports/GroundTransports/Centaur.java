@@ -1,24 +1,16 @@
 package Transports.GroundTransports;
 
 import Transports.GroundTransport;
+import Transports.RaceType;
 
 public class Centaur extends GroundTransport {
 
     public Centaur() {
 
-        name = "Centaur";
-        speed = 15.0;
+        super("Centaur", 15.0, RaceType.GroundTransport);
         timeBeforeRest = 8.0;
         usualTimeRest = 2.0;
 
     }
-
-    @Override
-    public String GetName() {
-
-        return name;
-
-    }
-
 
 }

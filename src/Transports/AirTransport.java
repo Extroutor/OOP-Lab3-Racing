@@ -1,10 +1,19 @@
 package Transports;
 
-public class AirTransport extends Transport {
+public abstract class AirTransport extends Transport {
+
+
+    protected AirTransport(String name, Double speed, RaceType type) {
+        super(name, speed, type);
+    }
+
+    public abstract double DistanceReducer(double distance);
 
     @Override
-    public boolean CanTakePart(RaceType type) {
-        return type != RaceType.GroundTransport;
+    public double GetRacingTime(double distance) {
+
+        return DistanceReducer(distance)/GetSpeed();
+
     }
-    
+
 }

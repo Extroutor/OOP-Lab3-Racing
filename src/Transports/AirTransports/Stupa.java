@@ -1,21 +1,20 @@
 package Transports.AirTransports;
 
 import Transports.AirTransport;
+import Transports.RaceType;
 
 public class Stupa extends AirTransport {
 
     public Stupa() {
-        name = "Stupa";
-        speed = 8.0;
+
+        super("Stupa", 8.0, RaceType.AirTransport);
+
     }
 
     @Override
-    public String GetName() { return name;}
+    public double DistanceReducer(double distance) {
 
-    @Override
-    public double GetAirRacingTime(double distance) {
-
-        return distance*0.94/speed;
+        return distance*0.94;
 
     }
 

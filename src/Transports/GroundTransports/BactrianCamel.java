@@ -1,22 +1,16 @@
 package Transports.GroundTransports;
 
 import Transports.GroundTransport;
+import Transports.RaceType;
 
 public class BactrianCamel extends GroundTransport {
 
     public BactrianCamel() {
 
-        name = "BactrianCamel";
-        speed = 10.0;
+        super("BactrianCamel", 10.0, RaceType.GroundTransport);
         timeBeforeRest = 30.0;
-        individualRest.put(1, 5.0);
+        individualRest.add(5.0);
         usualTimeRest = 8.0;
-    }
-
-    @Override
-    public String GetName() {
-
-        return name;
 
     }
 
